@@ -25,7 +25,7 @@ while(True):
     c=received["encoded"]
     if(received["type"]=="utf-8"):
         for i in range(len(c)):
-            p=p+chr(c[i])
+            p=p+chr( c[i] )
     elif(received["type"]=='base64'):
         p=base64.b64encode(c)
     elif(received["type"]=='hex'):
