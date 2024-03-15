@@ -17,5 +17,5 @@ for i in range(len(p)):
         p[i][j]=tuple(xor(a, b)for a, b in zip(p1[i][j], p2[i][j]))
 
 ans=Image.fromarray(p)
-ans.save("ans.png")
+ans.save("C:\\Users\\taotr\\Desktop\\wargame\\wargame\\cryptohack\\General\\XOR\\Lemur_xor\\ans.png")
 ans.show()
