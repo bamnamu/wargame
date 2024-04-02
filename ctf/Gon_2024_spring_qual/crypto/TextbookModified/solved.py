@@ -66,6 +66,9 @@ pb=(2048//n)+2
 e=65537
 i=1
 print(n)
+print(f'N: {N}')
+print(f"c: {c}")
+"""
 while(N>pow(2, pb)):
     factors = pollards_rho(N)
     if(is_prime(factors)):
@@ -73,13 +76,30 @@ while(N>pow(2, pb)):
         N=N//factors
         sb.append(factors)
         i=i+1
+    if(i>10):
+        break
 print(f"{n}번째 N의 소인수: {N}")
-sb.append(N)
+sb.append(N)ss
+"""
+
+ei=input()
+a=""
+for i in range(len(ei)):
+    if(ord(ei[i])>=48 and ord(ei[i])<=57):
+        a=a+ei[i]
+    elif(ei[i]=='×'):
+        sb.append(a)
+        a=""
+sb.append(a)
+    
 phi=1
 for i in range(len(sb)):
-    phi=phi*(sb[i]-1)
+    phi=phi*(int(sb[i])-1)
 d=pow(e, -1, phi)
 m=pow(c, d, N)
 print(m)
-p.sendline(long_to_bytes(m))
-p.interactive()
+p.sendline(str(m).encode())
+print(p.recvline())
+print(p.recvline()[0:-1])
+#https://www.alpertron.com.ar/ECMC.HTM << 소인수 분해 사이트
+#GoN{There_is_a_reason__to_say_not_to_do}

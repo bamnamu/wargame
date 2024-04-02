@@ -1,0 +1,50 @@
+Received: from [10.162.225.43] (HELO send005.gov-dooray.com)
+ ([10.162.225.43]) by smtp007.gov-dooray.com with SMTP id effa50e9660281d5;
+ Tue, 26 Mar 2024 17:05:41 +0900
+DKIM-Signature: a=rsa-sha256;
+ b=HaNKl26IPCMJo/G4JbA0xg2K9r1ublRpPRGeFulFEPPLxO/mfw2eYYpET6WC0Al4nv0eCHzj8w
+  HmTiHjcFsnXFOxpVcWZur3B1ZxaukVFLfLB4EJw425U1WpiIb31VZe72jbF2lxMFQ0g41Cp3JL8o
+  k221gi2ylNATuYk8067SGA144Ts14BszAz7b9ZOXhqlcsIuOtaPqCnkJPC0V6SdlusYPOIlr5oSK
+  PxdmdoV+Vs1XxO0qQGUIQHzJtxih8ioAz9YjOsUTQibbGdDa/cMSC/8ozABb5gVwr/eZlaUHXFkN
+  4tcZ6RngHWxx2K8MrD32d6pnq/QupY9sB8z8V6zw==;
+ c=relaxed/relaxed; s=selector; d=dooray.com; v=1;
+ bh=TPfXYK+TNiOkyF+8Rx87m3iggBbxpbRiNXv1/MicGdg=;
+ h=From:To:Subject:Message-ID;
+Received: from [220.81.249.74] (HELO 220.81.249.74) ([220.81.249.74]) by
+ send005.gov-dooray.com with SMTP id 7ca0d5eb660281d5; Tue, 26 Mar 2024
+ 17:05:41 +0900
+From: =?UTF-8?B?6rmA7KeE7ISc?= <jinseo@kaist.ac.kr>
+To: =?UTF-8?B?7KGw7KCV7ZuI?= <shell@kaist.ac.kr>
+Message-ID: <smhk4cc54ukr.smhk4cc8slwm.g5@dooray.com>
+Subject: =?UTF-8?B?7ZSM656Y6re4?=
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_637668_882540399.1711440339789"
+X-Dsn-Request: true
+X-Dooray-Agent: mail-api
+X-Dooray-Mail-Id: 3767626475038640331
+Importance: Normal
+X-Priority: Normal
+X-MSMail-Priority: Normal
+X-Dooray-Attached: c3+LUOpPU/IB7Wl+oemm0lw5HiI/bJHHYClX72L8E3o=
+Sender: "=?UTF-8?B?6rmA7KeE7ISc?=" <jinseo@kaist.ac.kr>
+Date: Tue, 26 Mar 2024 17:05:40 +0900 (KST)
+Authentication-Results: mx.dooray.com;
+  spf=pass clientip=10.162.225.43 envelop.from=@kaist.ac.kr;
+  dkim=pass (signature was verified) header.d=kaist.ac.kr;
+  dmarc=pass header.from=kaist.ac.kr
+
+------=_Part_637668_882540399.1711440339789
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: base64
+
+R29Oe1RydXRoIG9yIGxpZT8gZWRhNmI4ZTlkM2RhNzFlYWY3MmFjYjg4NGJlMjFkNWN9Cgo=
+------=_Part_637668_882540399.1711440339789
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: base64
+
+PGRpdiBzdHlsZT0iZm9udC1mYW1pbHk6IHN5c3RlbS11aTsgZm9udC1zaXplOiAxNHB4Ij48ZGl2
+PkdvTntUcnV0aCBvciBsaWU/IGVkYTZiOGU5ZDNkYTcxZWFmNzJhY2I4ODRiZTIxZDVjfTwvZGl2
+PjwhLS0gYmVnaW4gc2lnbmF0dXJlIC0tPjwhLS0gZW5kIHNpZ25hdHVyZSAtLT48L2Rpdj4=
+------=_Part_637668_882540399.1711440339789--
+

@@ -1,3 +1,4 @@
+"""
 import math
 from Crypto.Util.number import getPrime
 from Crypto.Random.random import randint
@@ -82,10 +83,19 @@ while(n>pow(2, 43)):
     print(f"{i}번째 N의 소인수: {factors}")
     n=n//factors
     i=i+1
+"""
 
-
-
-
+easyinput=[]
+ei=input()
+a=""
+for i in range(len(ei)):
+    if(ord(ei[i])>=48 and ord(ei[i])<=57):
+        a=a+ei[i]
+    elif(ei[i]=='×'):
+        easyinput.append(a)
+        a=""
+easyinput.append(a)
+print(easyinput)
 
 #ncat 158.247.225.252 13370
 """
