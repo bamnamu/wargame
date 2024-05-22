@@ -1,17 +1,9 @@
 from pwn import *
 from Crypto.Cipher import AES
-<<<<<<< HEAD
-from Crypto.Util.Padding import unpad
-
-p=remote('host3.dreamhack.games', 14845)
-=======
 from Crypto.Util.Padding import pad, unpad
 import os
 
-p=remote('host3.dreamhack.games', 15078)
-
-p.recv(1024)
->>>>>>> d17e4a9069e5da0b2625e88bd87470cf8a257ccd
+p=remote('host3.dreamhack.games', 12783)
 
 def enc(pt):
     p.sendline(b'1')
@@ -25,7 +17,6 @@ def dec(ct):
     p.sendline(ct.encode())
     return p.recvline()[:-1].decode()
 
-<<<<<<< HEAD
 def hexxor(a, b):
     return hex(int(a, 16)^int(b, 16))[2:]
 
@@ -46,23 +37,4 @@ flag=unpad(flag, 16).decode()
 print(flag)
 
 
-#ncat host3.dreamhack.games 10116
-=======
-def xxor(a, b):
-    return hex(int(a, 16)^int(b, 16))[2:]
-
-zero='00000000000000000000000000000000' 
-rand=enc('11111111111111111111111111111111')
-zeroIV=zero+rand
-d_zero_xor_IV=dec(zeroIV)[0:16]
-d_zero=dec(zeroIV)[16:32]
-IV=xxor(d_zero, d_zero_xor_IV)
-p.sendline(b'3')
-p.recvuntil(b'= ')
-enc_flag=p.recvline()[:-1]
-IV=IV.encode()
-flag=AES.new(IV, AES.MODE_CBC, IV).decrypt(enc_flag)
-flag=unpad(flag, 16).decode()
-print(flag)
-#ncat host3.dreamhack.games 15078
->>>>>>> d17e4a9069e5da0b2625e88bd87470cf8a257ccd
+#ncat host3.dreamhack.games 12783
