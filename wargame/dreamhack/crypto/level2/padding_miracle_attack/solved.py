@@ -1,7 +1,7 @@
 from pwn import *
 from os import *
 
-p=remote('host3.dreamhack.games', 17573)
+p=remote('host3.dreamhack.games', 9554)
 p.recvuntil(b': ')
 p.sendline(b'1')
 p.recvuntil(b': ')
@@ -28,6 +28,20 @@ def dec(ct):
     else:
         return False
 
-
-
-#ncat host3.dreamhack.games 17573
+def p_attack(ct):
+    zero=[0]*16
+    for i in range(16):
+        ex1=zero[:]
+        for j in range(i):
+            ex1[15-j]=ex1[15-j]^(i+1)
+        print(f"ex1 : {ex1}")
+        for k in range(256):
+            ex1[15-i]=k
+            if(dec(bytes(ex1)+ct)):
+                break
+        zero[15-i]=k^(i+1)
+        print(zero)
+    return
+a=b'ahahah'
+print(p_attack(enc(a)))
+#ncat host3.dreamhack.games 15786
